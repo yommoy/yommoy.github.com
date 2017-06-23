@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+.animated.infinite {
+    animation-iteration-count: infinite;
+}
+
+@keyframes circleAr {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 360deg);
+    opacity: 1;
+  }
+}
+@keyframes circleAr {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  20% {
+    transform: rotate3d(0, 0, 1, 72deg);
+
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, 144deg);
+
+  }
+
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg);
+
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 216deg);
+
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, 288deg);
+
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+.circleArSlow {
+    animation-name: circleAr;
+    -o-animation-name: circleAr;
+    -moz-animation-name: circleAr;
+    -webkit-animation-name: circleAr;
+    animation-duration: 50s;
+    -o-animation-duration: 50s;
+    -moz-animation-duration: 50s;
+    -webkit-animation-duration: 50s;
+    animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+.circleArFast {
+    animation-name: circleAr;
+    -o-animation-name: circleAr;
+    -moz-animation-name: circleAr;
+    -webkit-animation-name: circleAr;
+    animation-duration: 20s;
+    -o-animation-duration: 20s;
+    -moz-animation-duration: 20s;
+    -webkit-animation-duration: 20s;
+    animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+.circleArFastt {
+    animation-name: circleAr;
+    -o-animation-name: circleAr;
+    -moz-animation-name: circleAr;
+    -webkit-animation-name: circleAr;
+    animation-duration: 3s;
+    -o-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes flicker {
+    form {
+        opacity: 1;
+    }
+    5% {
+        opacity: 0.9;
+    } 
+    10% {
+        opacity: 0.8;
+    } 
+    15% {
+        opacity: 0.7;
+    } 
+    20% {
+        opacity: 0.6;
+    } 
+    25% {
+        opacity: 0.5;
+    } 
+    30% {
+        opacity: 0.4;
+    } 
+    35% {
+        opacity: 0.3;
+    } 
+    40% {
+        opacity: 0.2;
+    }
+    45% {
+        opacity: 0.1;
+    }  
+    50% {
+        opacity: 0;
+    } 
+    55% {
+        opacity: 0.1;
+    } 
+    60% {
+        opacity: 0.2;
+    } 
+    65% {
+        opacity: 0.3;
+    } 
+    70% {
+        opacity: 0.4;
+    } 
+    75% {
+        opacity: 0.5;
+    }   
+    80% {
+        opacity: 0.6;
+    } 
+    85% {
+        opacity: 0.7;
+    }   
+    90% {
+        opacity: 0.8;
+    } 
+    95% {
+        opacity: 0.9;
+    }   
+    to {
+        opacity: 1;
+    }
+}
+
+.flicker {
+    animation-name: flicker;
+    -o-animation-name: flicker;
+    -moz-animation-name: flicker;
+    -webkit-animation-name: flicker;
+    animation-duration: 3s;
+    -o-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.3, 1.3, 1.3);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    -o-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-name: pulse;
+    animation-duration: 3s;
+    -o-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes acrossLine3 {
+    from {
+        opacity: 0;
+        transform: translate3d(600%, 0, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(500%, 100%, 0);
+    }
+}
+
+.acrossLine3 {
+    animation-name: acrossLine3;
+}
+
+@keyframes acrossLine4 {
+    from {
+        opacity: 0;
+        transform: translate3d(400%, 0, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(120%, 300%, 0);
+    }
+}
+
+.acrossLine4 {
+    animation-name: acrossLine4;
+}
+
+@keyframes acrossLine5 {
+    from {
+        opacity: 0;
+        transform: translate3d(650%, 0, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform:   translate3d(200%,500%, 0)
+    }
+}
+
+.acrossLine5 {
+  animation-name: acrossLine5;
+}
+
+@keyframes outAcrossLine5 {
+    from {
+        opacity: 0;
+        transform: translate3d(1350%,-800%, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(950%,-300%, 0);
+    }
+}
+
+.outAcrossLine5 {
+  animation-name: outAcrossLine5;
+}
+
+@keyframes outAcrossLine4 {
+    from {
+        opacity: 0;
+        transform: translate3d(750%,-350%, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(550%,-150%, 0);
+    }
+}
+
+.outAcrossLine4 {
+  animation-name: outAcrossLine4;
+}
+
+@keyframes across3Line1 {
+    from {
+        opacity: 0;
+        transform: translate3d(600%,0, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(500%, 120%, 0);
+    }
+}
+
+.across3Line1 {
+  animation-name: across3Line1;
+}
+
+@keyframes across3Line2 {
+    from {
+        opacity: 0;
+        transform: translate3d(550%,0, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(500%,40%, 0);
+    }
+}
+
+.across3Line2 {
+  animation-name: across3Line2;
+}
+
+@keyframes across3Line3 {
+    from {
+        opacity: 0;
+        transform: translate3d(660%,220%, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(180%,720%, 0);
+    }
+}
+
+.across3Line3 {
+  animation-name: across3Line3;
+}
+
+@keyframes across3Line4 {
+    from {
+        opacity: 0;
+        transform: translate3d(670%,300%, 0);
+    }
+
+    to {
+        opacity: .7;
+        transform: translate3d(170%,800%, 0);
+    }
+}
+
+.across3Line4 {
+  animation-name: across3Line4;
+}
+
+@keyframes circleRound {
+      from {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, 0deg);
+      }
+
+      20% {
+        transform: rotate3d(0, 0, 1, 72deg);
+
+      }
+
+      40% {
+        transform: rotate3d(0, 0, 1, 144deg);
+
+      }
+
+      50% {
+        transform: rotate3d(0, 0, 1, 180deg);
+
+      }
+
+      60% {
+        transform: rotate3d(0, 0, 1, 216deg);
+
+      }
+
+      80% {
+        transform: rotate3d(0, 0, 1, 288deg);
+
+      }
+
+      to {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, 360deg);
+      }
+}
+
+.circleRound {
+    animation-name: circleRound;
+    -o-animation-name: circleRound;
+    -moz-animation-name: circleRound;
+    -webkit-animation-name: circleRound;
+    animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+
