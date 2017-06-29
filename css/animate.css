@@ -509,3 +509,45 @@
 }
 
 
+
+@keyframes shake {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    20% {
+        transform: translate3d(15px, 0, 0);
+    }
+
+    40% {
+        transform: translate3d(0, 15px, 0);
+    }
+
+    60% {
+        transform: translate3d(-15px, 0, 0);
+    }
+
+    80% {
+        transform: translate3d(0, -15px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.shake1 {
+    animation: shake 5s linear forwards;  
+}
+.shake3 {
+    animation: shake 5s linear 0.5s forwards;  
+}
+.shake5 {
+    animation: shake 5s linear 1s forwards;  
+}
+.shake2 {
+    animation: shake 5s linear 1.5s forwards;  
+}
+.shake4 {
+    animation: shake 5s linear 2s forwards;  
+}
