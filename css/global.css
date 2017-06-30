@@ -10,11 +10,10 @@
 
 .st-container>.menu {
     position: fixed;
-    width: 150px;
-    min-height: 400px;
-    max-height: 1000px;
-    left: 0;
-    top: 15%;
+    height: 130px;
+    min-width: 400px;
+    max-width: 1000px;
+    bottom: 0;
     z-index: 9998;
 }
 
@@ -24,6 +23,7 @@
     left: 0;
     width: 100px;
     height: 100px;
+    float: left;
     border-radius: 50px;
 }
 .st-container>.menu > a {
@@ -31,11 +31,12 @@
     width: 70px;
     height: 70px;
     border-radius: 50px;
-    border: 1px solid #ccc;
+    border: transparent;
     cursor: pointer;
+    float: left;
     font-size: 14px;
     display: block;
-    background: rgba(255,255,255,.05);
+    background: rgba(255,255,255,.2);
     color: #fff;
     margin: 25px;
     text-align: center;
@@ -43,7 +44,15 @@
     text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
 }
 
-.st-container>.menu > a:hover .menuLine {
+.st-container>.menu > a .menuLine {
+    stroke: #ddd;
+}
+.st-container>.menu > a:hover,.st-container>.menu > a.active {
+    background: rgba(255,255,255,0.6);    
+}
+
+.st-container>.menu > a:hover .menuLine,.st-container>.menu > a.active .menuLine {
+    stroke: #050d19;
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
     animation: dash 2s ease-in-out forwards;
@@ -199,9 +208,7 @@
     }
 }
 .progress {
-    position: absolute;
-    top: 200px;
-    left: 20%;
+    margin: 10% auto;
     padding: 0;
     text-align: center;
 }
@@ -248,10 +255,8 @@
     stroke-dasharray: 629;
     stroke: #050d19;
     opacity: .9;
-    -webkit-animation: load 3s;
-            animation: load 3s;
 }
-.progress li:hover svg:nth-child(2) path {
+.progress.active li svg:nth-child(2) path {
     -webkit-animation: load 3s;
             animation: load 3s;
 }
@@ -262,7 +267,7 @@
 .timeLine {
     width: 1142px;
     height: 500px;
-    margin: 10% auto;
+    margin: 5% auto;
     position: relative;
     color: #fff;
 }
@@ -300,59 +305,59 @@
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
 }
-.timeLine #svg_7.active,.timeLine #svg_9.active {
-    animation: dash 3s ease-in-out forwards;
+.timeLine.active #svg_7,.timeLine.active #svg_9 {
+    animation: dash 1s ease-in-out forwards;
 }
-.timeLine #svg_11.active {
-    animation: dash 10s ease-in-out 0.5s forwards;  
+.timeLine.active #svg_11 {
+    animation: dash 8s linear 0.5s forwards;  
 }
-.timeLine #svg_20.active {
+.timeLine.active #svg_20 {
+    animation: dash 3s ease-in-out 0.5s forwards;
+}
+.timeLine.active #svg_14,.timeLine.active #svg_15,.timeLine.active #svg_16 {
+    animation: dash 3s ease-in-out 1s forwards;
+}
+.timeLine.active>.experience1 {
+    animation: fadeInDown 1s ease-in-out 1.5s forwards;
+}
+.timeLine.active #svg_30 {
     animation: dash 3s ease-in-out 1.5s forwards;
 }
-.timeLine #svg_14.active,.timeLine #svg_15.active,.timeLine #svg_16.active {
+.timeLine.active #svg_29,.timeLine.active #svg_31,.timeLine.active #svg_32 {
     animation: dash 3s ease-in-out 2s forwards;
 }
-.timeLine>.experience1.active {
-    animation: fadeInDown 1s ease-in-out 2.5s forwards;
+.timeLine.active>.experience2 {
+    animation: fadeInUp 1s ease-in-out 2.5s forwards;
 }
-.timeLine #svg_30.active {
+.timeLine.active #svg_23 {
     animation: dash 3s ease-in-out 2.5s forwards;
 }
-.timeLine #svg_29.active,.timeLine #svg_31.active,.timeLine #svg_32.active {
+.timeLine.active #svg_21,.timeLine.active #svg_22,.timeLine.active #svg_24 {
     animation: dash 3s ease-in-out 3s forwards;
 }
-.timeLine>.experience2.active {
-    animation: fadeInUp 1s ease-in-out 3.5s forwards;
+.timeLine.active>.experience3 {
+    animation: fadeInDown 1s ease-in-out 3.5s forwards;
 }
-.timeLine #svg_23.active {
+.timeLine.active #svg_33 {
     animation: dash 3s ease-in-out 3.5s forwards;
 }
-.timeLine #svg_21.active,.timeLine #svg_22.active,.timeLine #svg_24.active {
+.timeLine.active #svg_35,.timeLine.active #svg_34,.timeLine.active #svg_36 {
     animation: dash 3s ease-in-out 4s forwards;
 }
-.timeLine>.experience3.active {
-    animation: fadeInDown 1s ease-in-out 4.5s forwards;
+.timeLine.active>.experience4 {
+    animation: fadeInUp 1s ease-in-out 4.5s forwards;
 }
-.timeLine #svg_33.active {
+.timeLine.active #svg_27 {
     animation: dash 3s ease-in-out 4.5s forwards;
 }
-.timeLine #svg_35.active,.timeLine #svg_34.active,.timeLine #svg_36.active {
+.timeLine.active #svg_25,.timeLine.active #svg_26,.timeLine.active #svg_28 {
     animation: dash 3s ease-in-out 5s forwards;
 }
-.timeLine>.experience4.active {
-    animation: fadeInUp 1s ease-in-out 5.5s forwards;
+.timeLine.active>.experience5 {
+    animation: fadeInDown 1s ease-in-out 5.5s forwards;
 }
-.timeLine #svg_27.active {
-    animation: dash 3s ease-in-out 5.5s forwards;
-}
-.timeLine #svg_25.active,.timeLine #svg_26.active,.timeLine #svg_28.active {
+.timeLine.active #svg_12,.timeLine.active #svg_13 {
     animation: dash 3s ease-in-out 6s forwards;
-}
-.timeLine>.experience5.active {
-    animation: fadeInDown 1s ease-in-out 6.5s forwards;
-}
-.timeLine #svg_12.active,.timeLine #svg_13.active {
-    animation: dash 3s ease-in-out 7s forwards;
 }
 
 @keyframes dash {
@@ -395,6 +400,54 @@
 }
 
 /* 音乐播放结束 */
+
+/* 旋转木马开始 */
+.imgBox img{
+    width:200px;
+    height: 300px;
+}
+@keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+
+}
+@-moz-keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+}
+@-ms-keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+}
+@-webkit-keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+}
+.imgBox{                
+    width:300px;
+    height:500px;
+    position:relative;
+    margin:auto;
+    margin-top:150px;
+    transform-style:preserve-3d;
+    transform:rotateX(-10deg);
+    animation: fn 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative
+}
+.imgBox:hover{
+    animation-play-state: paused;
+}
+.imgBox>div{
+    width:300px;
+    height:500px;
+    position: absolute;
+    left:0;
+    top:0;
+    
+}
+/* 旋转木马结束 */
 
 
 /* section_1 */
