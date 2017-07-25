@@ -36,7 +36,7 @@
     float: left;
     font-size: 14px;
     display: block;
-    background: rgba(255,255,255,.2);
+    background: transparent;
     color: #fff;
     margin: 25px;
     text-align: center;
@@ -306,7 +306,7 @@
     stroke-dashoffset: 1500;
 }
 .timeLine.active #svg_7,.timeLine.active #svg_9 {
-    animation: dash 1s ease-in-out forwards;
+    animation: dash 5s ease-in-out forwards;
 }
 .timeLine.active #svg_11 {
     animation: dash 8s linear 0.5s forwards;  
